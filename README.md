@@ -13,6 +13,30 @@ multi-page, cross-filterable report.
 data - generated to simulate a realistic sales scenario for building and
 practicing Power BI skills end-to-end (data modeling, DAX, dashboarding).
 
+## Dashboard Preview
+
+**Report Pages**
+
+![Page 1 - Overview](<PAGE 1.png>)
+![Page 2 - Drill-Through](<PAGE 2.png>)
+![Page 3 - Revenue vs Margin Toggle](<PAGE 3.png>)
+
+**Data Model & DAX**
+
+![Model Relationship View](<Model relationship view.png>)
+![DAX Formula](<Dax Formula.png>)
+
+**Interactivity**
+
+![Drill-Through in Action](<Drill through.png>)
+![Slicer Filtering](<Slicer.png>)
+
+**Additional Visuals**
+
+![Data Visual 1](<Data visuals 1.png>)
+![Data Visual 2](<Data visuals 2.png>)
+![Data Visual 3](<Data visuals 3.png>)
+
 ## Data Model
 
 Built as a star schema with one fact table and three dimension tables:
@@ -60,6 +84,20 @@ that category's top customers, top products, and its % of total company revenue.
 Bookmark-driven buttons ("View Revenue" / "View Margin") that switch the same
 visual between revenue and margin views, plus a back-navigation button.
 
+## Excel Analysis
+
+Alongside the Power BI build, the same underlying sales data was analyzed in
+Excel to practice formula-based and pivot-based analysis:
+
+- Lookup functions (VLOOKUP, INDEX-MATCH) to pull product and category details
+- Conditional aggregation (SUMIFS, COUNTIFS, AVERAGEIF) for region-, category-,
+  and salesperson-level breakdowns
+- Nested IF / AND logic for order classification (Order Size, High Value flags)
+- Pivot tables and pivot charts for Region x Category revenue breakdowns
+- Conditional formatting (highlight rules, color scales, icon sets) to surface
+  outliers directly in the raw data
+- Data validation (dropdown lists) and a duplicate-check audit for data integrity
+
 ## Data Quality Note
 
 While validating the Margin measure, I noticed company-wide margin was coming
@@ -77,7 +115,13 @@ Power BI Desktop · Power Query (M) · DAX · Excel (source data)
 
 ## Files in this repo
 
-- `sales-analytics-dashboard.pbix` - the full Power BI report
-- `powerbi_practice_data.xlsx` - source data (Sales, Products, Customers)
-- `screenshots/` - page-by-page images of the dashboard, since `.pbix` files
-  don't render in GitHub's file preview
+- `dataset.pbix` - the full Power BI report
+- `powerbi_practice_data (1).xlsx` - source data (Sales, Products, Customers)
+- `excel_practice_.xlsx` - Excel workbook with formulas, pivot tables, and
+  charts built on the same sales dataset
+- `PAGE 1.png`, `PAGE 2.png`, `PAGE 3.png` - full-page screenshots of each
+  report page, since `.pbix` files don't render in GitHub's file preview
+- `Model relationship view.png` - the star schema and table relationships
+- `Dax Formula.png` - a sample DAX measure
+- `Drill through.png`, `Slicer.png` - interactivity in action
+- `Data visuals 1-3.png` - individual chart/visual close-ups
